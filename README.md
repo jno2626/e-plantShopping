@@ -1,13 +1,15 @@
-Paradise Nursery Shopping Application
+e-plantShopping
+Project Name
+e-plantShopping - Paradise Nursery Shopping Application
 About the Project
-Paradise Nursery is an online shopping application for beautiful indoor houseplants.
+Paradise Nursery is an online plant shopping application that allows users to browse and purchase indoor plants.
 Features
 Browse different plant categories.
-View plant names, images, and prices.
+View plant images, names, and prices.
 Add plants to the shopping cart.
-Increase and decrease plant quantities.
-Remove plants from the cart.
-View the total shopping amount.
+Increase and decrease item quantities.
+Remove items from the cart.
+Calculate the total cart amount.
 Checkout option.
 Technologies Used
 React
@@ -17,8 +19,5 @@ Redux Toolkit
 React Router
 Vite
 Installation
-Clone or download the project.
 Run npm install.
 Run npm run dev.
-Project Name
-Paradise Nursery
