@@ -1,77 +1,25 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { useState } from "react"; import ProductList from "./ProductList"; import CartItem from "./CartItem"; import AboutUs from "./AboutUs"; import "./App.css";
+function App() { const [showProductList, setShowProductList] = useState(false); const [showCart, setShowCart] = useState(false);
+if (showCart) { return <CartItem />; }
+if (showProductList) { return <ProductList />; }
+return ( <div className="landing-page"> <div className="background-image"> <div className="landing-content"> <h1>Welcome to Paradise Nursery</h1> <p> Bring nature home with our beautiful collection of indoor plants. </p>
+      <button
+        onClick={() => setShowProductList(true)}
+        className="get-started-button"
+      >
+        Get Started
+      </button>
 
-import AboutUs from "./AboutUs";
+      <button
+        onClick={() => setShowCart(true)}
+        className="get-started-button"
+      >
+        Cart
+      </button>
 
-import { useSelector } from "react-redux";
-
-import "./App.css";
-
-import ProductList from "./ProductList";
-
-import CartItem from "./CartItem";
-
-
-
-function App() {
-
-  const cartItems = useSelector((state) => state.cart.items);
-
-  const cartCount = cartItems.reduce(
-
-      (total, item) => total + item.quantity,
-
-      0
-
-  );
-
-  return (
-
-      <div>
-
-        <Routes>
-          <Route path="/about" element={<AboutUs />} />
-          <Route
-
-              path="/"
-
-              element={
-
-                <div className="hero">
-
-                  <div className="hero-content">
-
-                    <h1>Paradise Nursery</h1>
-
-                    <p>
-
-                      Bring nature home with our beautiful houseplants.
-
-                    </p>
-
-                    <Link to="/plants" className="start-button">
-
-                      Get Started
-
-                    </Link>
-
-                  </div>
-
-                </div>
-
-              }
-
-          />
-
-          <Route path="/plants" element={<ProductList />} />
-
-          <Route path="/cart" element={<CartItem />} />
-
-        </Routes>
-
-      </div>
-
-  );
-
-}
-
+      <AboutUs />
+    </div>
+  </div>
+</div>
+); }
 export default App;
