@@ -1,0 +1,22 @@
+import "./AboutUs.css";
+function AboutUs() { return ( <div className="about-page"> <h1>About Paradise Nursery</h1>
+        <p>
+            Paradise Nursery is dedicated to bringing nature
+            closer to your home.
+        </p>
+
+        <p>
+            We offer a variety of beautiful indoor plants
+            that add freshness, beauty, and happiness to
+            your living spaces.
+        </p>
+
+        <h2>Our Mission</h2>
+
+        <p>
+            Our mission is to make every home greener
+            and create a peaceful environment through plants.
+        </p>
+    </div>
+); }
+export default AboutUs;
